@@ -1,10 +1,12 @@
 # starship-interrupted-preset
 
-A preset configuration for Starship.
+A preset configuration for Starship or OhMyPosh.
 
 Custom shell prompts offer visual candy.
 
 [Starship](https://starship.rs/) offers some presets exploring some customization options. Presets can be configured by editing the `~/.config/starship.toml` file.
+
+[Oh My Posh](https://ohmyposh.dev/) also allows storing a configuration file, using a different format.
 
 ## Screenshots
 

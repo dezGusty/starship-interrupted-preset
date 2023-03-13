@@ -42,11 +42,12 @@ truncate_to_repo = false
 # "Important  " = "  "
 
 [c]
-symbol = " "
+symbol = ""
 format = '\[[ $symbol ($version) ]($style)\]'
 
 [dotnet]
-symbol = " "
+symbol = ""
+style = "fg:#ac99ea"
 format = '\[[ $symbol ($version) ]($style)\]'
 
 [docker_context]
