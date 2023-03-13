@@ -8,6 +8,10 @@ Custom shell prompts offer visual candy.
 
 [Oh My Posh](https://ohmyposh.dev/) also allows storing a configuration file, using a different format.
 
+## Version history
+
+📜 Please consult the [CHANGELOG](./CHANGELOG.md)
+
 ## Configuring
 
 For both options:
