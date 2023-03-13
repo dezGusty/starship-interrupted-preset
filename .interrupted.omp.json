@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "shell",
+          "style": "plain",
+          "foreground": "#155981",
+          "template": "{{ .Name }}",
+          "properties": {
+            "mapped_shell_names": {
+              "powershell": "ps",
+              "pwsh": "ps"
+            }
+          }
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "foreground": "#66ffdd",
+          "background": "#155981",
+          "leading_diamond": "\ue0c7",
+          "template": " \uf74a"
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffe7",
+          "background": "#155981",
+          "template": " {{ .Path }} ",
+          "properties": {
+            "home_icon": "~",
+            "style": "full"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#155981",
+          "template": "\ue0c6",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#ffcc88",
+          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "properties": {
+            "branch_icon": " ",
+            "branch_max_length": 25,
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": false
+          }
+        },
+        {
+          "type": "angular",
+          "style": "plain",
+          "foreground": "#AA2A2C",
+          "template": "<#FFFFFF>[</> \ue753{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} <#FFFFFF>]</>"
+        },
+        {
+          "type": "cmake",
+          "style": "plain",
+          "foreground": "#1E9748",
+          "template": "<#FFFFFF>[</> \ue61d cmake {{ .Full }} <#FFFFFF>]</>"
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#6CA35E",
+          "template": "<#FFFFFF>[</> \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} <#FFFFFF>]</>",
+          "properties": {
+            "fetch_version": true
+          }
+        },
+        {
+          "type": "dotnet",
+          "style": "plain",
+          "foreground": "#AC99EA",
+          "template": "<#FFFFFF>[</> \ue72e {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} <#FFFFFF>]</>"
+        },
+        {
+          "type": "rust",
+          "style": "plain",
+          "foreground": "#e74856",
+          "template": "<#FFFFFF>[</> \uE7a8 {{ .Full }} <#FFFFFF>]</>"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#155981",
+          "trailing_diamond": "\ue0c5",
+          "template": "\ue0c5",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#e0e0b0",
+          "background": "#155981",
+          "template": "{{ .FormattedMs }}",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#155981",
+          "background": "#00b5cf",
+          "template": "\ue0c6 ",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "exit",
+          "style": "plain",
+          "foreground": "#00ff00",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ],
+          "template": "<parentBackground>\ue0b0</>\ue0b1",
+          "properties": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ]
+}
